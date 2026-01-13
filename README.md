@@ -49,7 +49,7 @@ Clean Architecture • Microservices • .NET 8 • Next.js 16 • Docker • Az
 - **[`Azure Blob Storage`](https://azure.microsoft.com/en-us/products/storage/blobs)** - Massively scalable object storage for cloud-native workloads (Images, Music).
 
 ### Back-end
-- **[`.NET 8`](https://dotnet.microsoft.com/)** - The latest LTS version of the .NET platform for high-performance services.
+- **[`.NET 8`](https://dotnet.microsoft.com/)** - An LTS version of the .NET platform for building high-performance services..
 - **[`ASP.NET Core Web API`](https://learn.microsoft.com/en-us/aspnet/core/web-api/)** - Framework for building HTTP services.
 - **[`YARP`](https://microsoft.github.io/reverse-proxy/)** - A high-performance reverse proxy toolkit for building the API Gateway.
 - **[`EF Core 8`](https://learn.microsoft.com/en-us/ef/core/)** - Modern object-database mapper for .NET.
