@@ -182,8 +182,8 @@ wedding-frontend/
 ## Getting Started
 
 ### Prerequisites
-- **Docker Desktop** (Kubernetes enabled recommended)
-- **Node.js 20+** (LTS)
+- **Docker Desktop**
+- **Node.js 20+**
 - **.NET 8 SDK**
 - **Yarn** (Preferred) or **NPM**
 
@@ -229,7 +229,7 @@ The **Gateway Service** (running on port `5000` or configured port) routes traff
 
 | Route Pattern | Target Service | Description |
 |---------------|----------------|-------------|
-| `/api/auth/*` | Auth Service | Authentication endpoints (Login, Register, User Info) |
+| `/api/auth/*` | Auth Service | Authentication endpoints (Login) |
 | `/api/wedding/*`| Wedding Service| Wedding management endpoints (Create, Update, Get, RSVP) |
 
 ### Access the API
