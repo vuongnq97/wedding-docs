@@ -87,6 +87,48 @@ The backend services follow the **Clean Architecture** principles:
 3.  **Infrastructure Layer**: Implements interfaces defined in Domain/Application (Database Access, File Storage, External Services).
 4.  **Presentation (API) Layer**: Entry point for the application (Controllers, Endpoints). Depends on Application and Infrastructure.
 
+### Use Case: Auth Service/Wedding Service Structure
+
+The following diagram illustrates how the **Auth Service** implements the Clean Architecture layers:
+
+```text
+                            Client
+                              |
+                              v
+   +-------------------------------------------------------+
+   |                  Presentation Layer                   |
+   |                    (Service.API)                      |
+   |                                                       |
+   |   [Controllers]    [Middlewares]    [Filters]         |
+   |        |                 |               |            |
+   +--------|-----------------|---------------|------------+
+            |                 |               |
+            v                 v               v
+   +-------------------------------------------------------+
+   |                  Application Layer                    |
+   |                 (Service.Application)                 |
+   |                                                       |
+   |     [Services]   [CQRS Handlers]   [Validators]       |
+   |        ^                 ^               ^            |
+   +--------|-----------------|---------------|------------+
+            |                 |               |
+   +--------|-----------------|---------------|------------+
+   |        |         Domain Layer            |            |
+   |        |        (Service.Domain)         |            |
+   |        |                                 |            |
+   |     [Entities]   [ValueObjects]    [Enums]            |
+   +--------^---------------------------------^------------+
+            |                                 |
+            |   (Implements Interfaces)       |
+            |                                 |
+   +--------|---------------------------------|------------+
+   |        |      Infrastructure Layer       |            |
+   |        |    (Service.Infrastructure)     |            |
+   |        |                                 |            |
+   |  [Repositories]    [DbContext]      [External APIs]   |
+   +-------------------------------------------------------+
+```
+
 ---
 
 ## Microservices Overview
@@ -101,9 +143,9 @@ The backend services follow the **Clean Architecture** principles:
 
 ## Web Applications
 
-| Application | Port | Technology Stack | Purpose |
-|-------------|------|------------------|---------|
-| **Trăm Năm Client** | 3000 | Next.js 16 + Tailwind | The main public-facing and admin portal. Allows couples to customize invitations and guests to view them. |
+| Application | Technology Stack | Purpose |
+|-------------|------------------|---------|
+| **Trăm Năm Client** | Next.js 16 + Tailwind | The main public-facing and admin portal. Allows couples to customize invitations and guests to view them. |
 
 ---
 
